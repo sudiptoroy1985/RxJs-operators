@@ -1,0 +1,23 @@
+<section>
+  <ng-container *ngIf="(item$ | async) as item">
+
+    <h2>{{item?.item.by}}</h2>
+    <div>{{item?.item.type}}</div>
+    <div>{{item?.item.title}}</div>
+    <div>{{item?.item.score}}</div>
+    <div>{{item?.item.time}}</div>
+
+    <div *ngFor="let item of item?.childItem$Array">
+      <h2>{{item?.by}}</h2>
+      <div>{{item?.text}}</div>
+      <div>{{item?.title}}</div>
+      <div>{{item?.score}}</div>
+      <div>{{item?.time}}</div>
+    </div>
+
+
+
+</ng-container>
+
+
+
