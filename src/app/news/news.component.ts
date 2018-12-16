@@ -27,24 +27,20 @@ import { environment } from 'src/environments/environment';
   )
 export class NewsComponent implements OnInit {
 
-  constructor(private service: ApiService<Item>) {}
+  constructor(private itemService: ApiService<Item>) {}
 
   item$ : Observable<any>;
 
   ngOnInit() {
-    this.item$ = this.service.get(`${environment.itemUrl}8863.json`)
+    this.item$ = this.itemService.get(`8863.json`)
                   .pipe(
                    mergeMap(item => {
-                    const childItem$Array = item.kids.map(itemId => this.loadChildItems(itemId));
+                    const childItem$Array = item.kids.map(itemId => this.itemService.get(`${itemId}.json`));
                     return combineLatest(childItem$Array).pipe(
                       map(childItem$Array => ({childItem$Array, item}))
                     );
                 }),
                 );
-  }
-
-  loadChildItems(id) {
-    return this.service.get(`${environment.itemUrl}${id}.json`)
   }
 }
 

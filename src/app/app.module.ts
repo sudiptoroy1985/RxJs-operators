@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NewsComponent } from './news/news.component';
+import { MarkdownModule } from 'ngx-markdown';
+
 
 @NgModule({
   declarations: [
@@ -12,6 +14,7 @@ import { NewsComponent } from './news/news.component';
     NewsComponent
   ],
   imports: [
+    MarkdownModule.forRoot(),
     BrowserModule,
     HttpClientModule
   ],

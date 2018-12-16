@@ -1,23 +1,22 @@
-<section>
-  <ng-container *ngIf="(item$ | async) as item">
+<section class="container">
+  <section class="dragg-list">
+    <div class="dragg alert alert-primary" *ngIf="(item$ | async) as item">
+      <span class="heading">
+        <h2>{{item?.item.by}} <span class="badge badge-pill badge-primary">{{item?.item.score}}</span></h2>
+        <div>{{item?.item.time | date}}</div>
+      </span>
 
-    <h2>{{item?.item.by}}</h2>
-    <div>{{item?.item.type}}</div>
-    <div>{{item?.item.title}}</div>
-    <div>{{item?.item.score}}</div>
-    <div>{{item?.item.time}}</div>
+      <div>{{item?.item.title}}</div>
 
-    <div *ngFor="let item of item?.childItem$Array">
-      <h2>{{item?.by}}</h2>
-      <div>{{item?.text}}</div>
-      <div>{{item?.title}}</div>
-      <div>{{item?.score}}</div>
-      <div>{{item?.time}}</div>
+
+      <div class="dock alert alert-light" *ngFor="let item of item?.childItem$Array ">
+        <span class="heading">
+          <strong>{{item?.by}}</strong>
+          <div>{{item?.time | date}}</div>
+        </span>
+        <markdown>{{item?.text}}</markdown>
+      </div>
     </div>
 
 
-
-</ng-container>
-
-
-
+  </section>
