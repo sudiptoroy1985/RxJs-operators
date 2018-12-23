@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {  interval, fromEvent } from 'rxjs';
+import {  interval, fromEvent, from } from 'rxjs';
 import { take, throttle, throttleTime } from 'rxjs/operators';
 
 @Component({selector: 'app-add-from-event', templateUrl: './add-from-event.component.html', styleUrls: ['./add-from-event.component.css']})

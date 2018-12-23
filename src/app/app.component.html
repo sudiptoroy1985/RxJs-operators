@@ -1,4 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-news></app-news>
-
-  
+<section>
+  <div class="tree">
+    <nav class="nav flex-column">
+      <a href="#" class="nav-link-group disabled"><H3>OBSERVABLES</H3></a>
+      <a #what class="nav-link active" [ngClass]="{'active': selectedItem == what}" routerLink="/whatareobservables" (click)="listClick(what)">What are Observables</a>
+      <a #emit class="nav-link" [ngClass]="{'active': selectedItem == emit}" routerLink="/emitValues" (click)="listClick(emit)">Emit Multiple Values</a>
+      <a #errorAndComplete class="nav-link" [ngClass]="{'active': selectedItem == errorAndComplete}" routerLink="/errorAndComplete" (click)="listClick(errorAndComplete)">Error And Complete</a>
+      <a #unicast class="nav-link" [ngClass]="{'active': selectedItem == unicast}" routerLink="/unicast" (click)="listClick(unicast)">Unicast</a>
+      <a #unsubscribe class="nav-link" [ngClass]="{'active': selectedItem == unsubscribe}" routerLink="/unsubscribe" (click)="listClick(unsubscribe)">Unsubscribe</a>
+      <a #addRemove class="nav-link" [ngClass]="{'active': selectedItem == addRemove}" routerLink="/addRemove" (click)="listClick(addRemove)">Add and Remove Subscriptions</a>
+      <a href="#" class="nav-link-group disabled"><H5>CREATE</H5></a>
+      <a #addFromEvent class="nav-link" [ngClass]="{'active': selectedItem == addFromEvent}" routerLink="/addFromEvent" (click)="listClick(addFromEvent)">From Event - DOM Mouse Move</a>
+      <a #addFromList class="nav-link" [ngClass]="{'active': selectedItem == addFromList}" routerLink="/addFromList" (click)="listClick(addFromList)">From - Integer List</a>
+      <a #addFromPromise class="nav-link" [ngClass]="{'active': selectedItem == addFromPromise}" routerLink="/addFromPromise" (click)="listClick(addFromPromise)">From Promise - Fetch API</a>
+    </nav>
+  </div>
+  <div class="workspace">
+    <router-outlet></router-outlet>
+  </div>
+</section>

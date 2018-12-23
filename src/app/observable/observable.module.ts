@@ -8,9 +8,11 @@ import { UnicastComponent } from './unicast/unicast.component';
 import { UnsubscribeComponent } from './unsubscribe/unsubscribe.component';
 import { AddRemoveObservablesComponent } from './add-remove-observables/add-remove-observables.component';
 import { AddFromEventComponent } from './add-from-event/add-from-event.component';
+import { AddFromListComponent } from './add-from-list/add-from-list.component';
+import { AddFromPromiseComponent } from './add-from-promise/add-from-promise.component';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [WhatAreObservablesComponent, EmitValuesComponent, RendererComponent, ErrorAndCompleteComponent, UnicastComponent, UnsubscribeComponent, AddRemoveObservablesComponent, AddFromEventComponent]
+  declarations: [WhatAreObservablesComponent, EmitValuesComponent, RendererComponent, ErrorAndCompleteComponent, UnicastComponent, UnsubscribeComponent, AddRemoveObservablesComponent, AddFromEventComponent, AddFromListComponent, AddFromPromiseComponent]
 })
 export class ObservableModule {}

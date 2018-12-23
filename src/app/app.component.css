@@ -4,3 +4,37 @@
   font-family: 'Roboto', sans-serif !important;
  }
 
+ section {
+   display: inline-flex;
+ }
+
+ .tree {
+    margin: 20px;
+    background-color: white;
+    color: white;
+    min-height: 900px;
+    min-width: 300px;
+    text-align: center;
+    border-right: 4px solid indigo;
+ }
+
+ .workspace {
+   margin:20px;
+ }
+
+ .nav-link {
+   color: darkgray;
+ }
+
+ .nav-link-group{
+   margin-top: 10px;
+   color: #000;
+ }
+
+ .nav-link.active{
+   color: indigo;
+   font-size: large;
+ }
+
+
+
