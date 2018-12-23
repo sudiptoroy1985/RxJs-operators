@@ -1,0 +1,11 @@
+
+.container {
+  margin: 5px;
+  width:1000px;
+  background: white;
+  padding: 10px;
+  text-align: center;
+  color: indigo;
+  border:1px solid indigo;
+  border-radius: 10px;
+}
