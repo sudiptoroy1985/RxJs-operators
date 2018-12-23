@@ -7,9 +7,10 @@ import { ErrorAndCompleteComponent } from './error-and-complete/error-and-comple
 import { UnicastComponent } from './unicast/unicast.component';
 import { UnsubscribeComponent } from './unsubscribe/unsubscribe.component';
 import { AddRemoveObservablesComponent } from './add-remove-observables/add-remove-observables.component';
+import { AddFromEventComponent } from './add-from-event/add-from-event.component';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [WhatAreObservablesComponent, EmitValuesComponent, RendererComponent, ErrorAndCompleteComponent, UnicastComponent, UnsubscribeComponent, AddRemoveObservablesComponent]
+  declarations: [WhatAreObservablesComponent, EmitValuesComponent, RendererComponent, ErrorAndCompleteComponent, UnicastComponent, UnsubscribeComponent, AddRemoveObservablesComponent, AddFromEventComponent]
 })
 export class ObservableModule {}
