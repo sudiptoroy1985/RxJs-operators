@@ -13,6 +13,16 @@
       <a #addFromEvent class="nav-link" [ngClass]="{'active': selectedItem == addFromEvent}" routerLink="/addFromEvent" (click)="listClick(addFromEvent)">From Event - DOM Mouse Move</a>
       <a #addFromList class="nav-link" [ngClass]="{'active': selectedItem == addFromList}" routerLink="/addFromList" (click)="listClick(addFromList)">From - Integer List</a>
       <a #addFromPromise class="nav-link" [ngClass]="{'active': selectedItem == addFromPromise}" routerLink="/addFromPromise" (click)="listClick(addFromPromise)">From Promise - Fetch API</a>
+
+    </nav>
+    <nav class="nav flex-column">
+        <a href="#" class="nav-link-group disabled"><H3>SUBJECTS</H3></a>
+        <a #whatSubjects class="nav-link active" [ngClass]="{'active': selectedItem == whatSubjects}" routerLink="/whataresubjects" (click)="listClick(whatSubjects)">What are Subjects</a>
+        <a #subjectsMulticast class="nav-link active" [ngClass]="{'active': selectedItem == subjectsMulticast}" routerLink="/subjectsMulticast" (click)="listClick(subjectsMulticast)">Multicast</a>
+        <a #subjectsAsObservables class="nav-link active" [ngClass]="{'active': selectedItem == subjectsAsObservables}" routerLink="/subjectsAsObservables" (click)="listClick(subjectsAsObservables)">subjects As Observables</a>
+        <a #replaySubjects class="nav-link active" [ngClass]="{'active': selectedItem == replaySubjects}" routerLink="/replaySubjects" (click)="listClick(replaySubjects)">Replay Subjects</a>
+        <a #behaviourSubjects class="nav-link active" [ngClass]="{'active': selectedItem == behaviourSubjects}" routerLink="/behaviourSubjects" (click)="listClick(behaviourSubjects)">Behavior Subjects</a>
+        <a #asyncSubjects class="nav-link active" [ngClass]="{'active': selectedItem == asyncSubjects}" routerLink="/asyncSubjects" (click)="listClick(asyncSubjects)">Async Subjects</a>
     </nav>
   </div>
   <div class="workspace">

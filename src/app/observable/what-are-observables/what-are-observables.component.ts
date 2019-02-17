@@ -19,9 +19,8 @@ export class WhatAreObservablesComponent implements OnInit{
       observer.next(Math.random());
     });
 
-    let subscription = observable1$.subscribe(
-      (data : any) => this.messages.push(data),
-      ); //subscribing to an RxJS Observable creates a RxJS Subscription.
+    let subscription = observable1$.subscribe(data => this.messages.push(data));
+    //subscribing to an  Observable creates a  Subscription.
   }
 
 

@@ -19,16 +19,18 @@ export class AddRemoveObservablesComponent implements OnInit {
     let timer2$Subscription = timer2$.subscribe((time:any) => this.messages.push(`timer 2 output ${time}`));
 
     timer1$Subscription.add(timer2$Subscription);
+
+
     setTimeout(() => {
-      timer1$Subscription.unsubscribe();
-      this.messages.push('UNSUBSCRIBED TIMER 1')
+      timer2$Subscription.unsubscribe();
+      this.messages.push('UNSUBSCRIBED TIMER 2')
     }, 1000);
 
     timer1$Subscription.remove(timer2$Subscription);
     setTimeout(() => {
         timer2$Subscription.unsubscribe();
         this.messages.push('UNSUBSCRIBED TIMER 2')
-    }, 1500);
+    }, 1000);
   }
 
 }

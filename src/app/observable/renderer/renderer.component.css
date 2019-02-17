@@ -5,7 +5,8 @@
   background: white;
   padding: 10px;
   text-align: center;
-  color: indigo;
-  border:1px solid indigo;
+  color: #fff;
   border-radius: 10px;
+  background: indigo;
+  opacity: 0.5;
 }

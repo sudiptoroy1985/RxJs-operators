@@ -14,8 +14,7 @@ export class AddFromPromiseComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    let news$ = from(
-                  fetch("https://hacker-news.firebaseio.com/v0/item/18744464.json")
+    let news$ = from(fetch("https://hacker-news.firebaseio.com/v0/item/18744464.json")
                     .then(response => response.json())
                    );
 

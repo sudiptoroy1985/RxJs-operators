@@ -16,7 +16,9 @@ export class EmitValuesComponent implements OnInit {
       }, 1000);
     });
 
-    timer$.subscribe((data : any) => this.messages.push(`FROM TIMER SUBSCRIPTION -  ${data}`));
+    timer$.subscribe((data : any) => this.messages.push(`FROM TIMER SUBSCRIPTION -  ${data}`))
+    .pipe()
+    ;
 
   }
 

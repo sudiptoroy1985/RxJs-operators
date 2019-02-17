@@ -14,7 +14,9 @@ export class ErrorAndCompleteComponent implements OnInit {
       if (Math.random() > 0.5) {
         observer.error("Reason for error");
       }
+      console.log('errored out');
       observer.next(Math.random());
+      observer.complete();
     });
 
     observable1$.subscribe(
