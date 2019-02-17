@@ -5,6 +5,9 @@ import { RendererComponent } from '../observable/renderer/renderer.component';
 import { SwitchMapComponent } from './switch-map/switch-map.component';
 import { MergeMapComponent } from './merge-map/merge-map.component';
 import { ConcatMapComponent } from './concat-map/concat-map.component';
+import { FilterComponent } from './filter/filter.component';
+import { DebounceTimeComponent } from './debounce-time/debounce-time.component';
+import { ThrottleTimeComponent } from './throttle-time/throttle-time.component';
 
 @NgModule({
   imports: [
@@ -14,6 +17,9 @@ import { ConcatMapComponent } from './concat-map/concat-map.component';
     RendererComponent,
     SwitchMapComponent,
     MergeMapComponent,
-    ConcatMapComponent]
+    ConcatMapComponent,
+    FilterComponent,
+    DebounceTimeComponent,
+    ThrottleTimeComponent]
 })
 export class OperatorModule { }
